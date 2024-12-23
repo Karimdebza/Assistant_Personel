@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:host {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(53, 105, 255, 1), rgba(253, 101, 133, 1));
+}
+
+.signup-card {
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    width: 35%;
+    background: #ffffff;
+    padding: 20px 40px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.signup-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e2e2e2;
+    margin-bottom: 20px;
+}
+
+.card-title h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: rgba(53, 105, 255, 1);
+    margin-bottom: 8px;
+}
+
+.card-title span {
+    font-size: 14px;
+    color: #555;
+}
+
+.card-title span a {
+    color: rgba(253, 101, 133, 1);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.card-title span a:hover {
+    text-decoration: underline;
+}
+
+.form-group input {
+    margin: 10px 0;
+    width: 100%;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    outline: none;
+    padding: 12px 15px;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: rgba(53, 105, 255, 1);
+    background-color: #f3f8ff;
+}
+
+.form-group input[type="submit"] {
+    background-color: rgba(53, 105, 255, 1);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    outline: none;
+    border-radius: 6px;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: rgba(44, 87, 214, 1);
+    transform: translateY(-2px);
+}
+
+.card-terms {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.card-terms input {
+    margin-right: 10px;
+}
+
+.card-terms span {
+    font-size: 13px;
+}
+
+.card-terms span a {
+    color: rgba(253, 101, 133, 1);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.card-terms span a:hover {
+    text-decoration: underline;
+}
