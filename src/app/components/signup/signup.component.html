@@ -1,15 +1,64 @@
 <div class="signup-card">
-    <div class="card-title">
-        <h1>Create Account</h1>
-        <span>Already have an account? <a routerLink="/login">Sign In</a></span>
+  <div class="card-title">
+    <h1>Création de compte</h1>
+    <span>
+      Already have an account? <a routerLink="/login">Sign In</a>
+    </span>
+  </div>
+
+  <form [formGroup]="signupForm" class="form-group" (ngSubmit)="onSubmit()">
+    <input
+      type="text"
+      name="firstName"
+      placeholder="First Name"
+      formControlName="firstName"
+    />
+    <div *ngIf="signupForm.controls['firstName']?.invalid && signupForm.controls['firstName']?.touched">
+      <small class="error-text">First name is required</small>
     </div>
-    <form class="form-group">
-        <input type="text" name="name" placeholder="Name" formControlName="name">
-        <input type="email" name="email" placeholder="Email" formControlName="email">
-        <input type="password" name="password" placeholder="Password" formControlName="password">
-        <input type="submit" value="Signup">
-    </form>
-    <div class="card-terms">
-        <input type="checkbox"> <span>I have read and agree to the <a href="">Terms of Service</a></span>
+
+    <input
+      type="text"
+      name="username"
+      placeholder="Username"
+      formControlName="username"
+    />
+    <div *ngIf="signupForm.controls['username']?.invalid && signupForm.controls['username']?.touched">
+      <small class="error-text">Username is required</small>
     </div>
+
+    <input
+      type="text"
+      name="lastName"
+      placeholder="Last Name"
+      formControlName="lastName"
+    />
+    <div *ngIf="signupForm.controls['lastName']?.invalid && signupForm.controls['lastName']?.touched">
+      <small class="error-text">Last name is required</small>
+    </div>
+
+    <input
+      type="email"
+      name="email"
+      placeholder="Email"
+      formControlName="email"
+    />
+    <div *ngIf="signupForm.controls['email']?.invalid && signupForm.controls['email']?.touched">
+      <small class="error-text">A valid email is required</small>
+    </div>
+
+    <input
+      type="password"
+      name="password"
+      placeholder="Password"
+      formControlName="password"
+    />
+    <div *ngIf="signupForm.controls['password']?.invalid && signupForm.controls['password']?.touched">
+      <small class="error-text">Password is required</small>
+    </div>
+
+  
+
+    <input type="submit" value="Signup" [disabled]="signupForm.invalid" />
+  </form>
 </div>
